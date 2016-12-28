@@ -4,4 +4,4 @@ export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 
 # virtualenv
-alias mlact="$HOME/.ml-env/bin/activate"
+alias mlact="source $HOME/.ml-env/bin/activate"

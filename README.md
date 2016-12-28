@@ -7,7 +7,8 @@
 
     # Login container
     docker run -it -p 8888:8888 zuqqhi2/mlenv /bin/bash
-    source ~/.ml-env/bin/activate
+    source ~/.bash_profile
+    mlact
 
 # References
 
