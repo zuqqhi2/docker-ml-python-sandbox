@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
   curl \
   python-dev \
   sudo \
-  vim
+  vim \
+  graphviz
 
 # Create user
 RUN mkdir /home/ml
@@ -22,6 +23,8 @@ RUN chown ml:ml /home/ml
 USER ml
 ENV HOME /home/ml
 WORKDIR $HOME
+RUN mkdir $HOME/share
+ADD . $HOME/share
 
 # Install pyenv
 RUN git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
