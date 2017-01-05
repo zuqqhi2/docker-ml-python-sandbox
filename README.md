@@ -20,3 +20,5 @@ Please update passwords before building image.
 # References
 
 - [Jupyter Notebook - Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)
+- [JUMAN++をPythonから使う](http://qiita.com/riverwell/items/7a85ebf95647eaf18a6c)
+- [MecabをUbuntu14.04にインストールして実行してみる](https://foolean.net/p/22)
