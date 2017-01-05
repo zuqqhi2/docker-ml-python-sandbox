@@ -14,10 +14,10 @@ Please update passwords before building image.
     docker build -t zuqqhi2/mlenv .
 
     # Run jupyter notebook
-    docker run -it -p 8888:8888 zuqqhi2/mlenv
+    docker run -it -p 8888:8888 zuqqhi2/ml-sandbox
 
     # Login container
-    docker run -it -p 8888:8888 zuqqhi2/mlenv /bin/bash
+    docker run -it -p 8888:8888 zuqqhi2/ml-sandbox /bin/bash
     source ~/.bash_profile
     mlact
 
