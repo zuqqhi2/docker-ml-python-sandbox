@@ -22,6 +22,26 @@ RUN apt-get update && apt-get install -y \
   mecab-ipadic-utf8 \
   wget
 
+# Install Juman & KNP 
+RUN mkdir /home/root
+RUN mkdir /home/root/work-juman
+WORKDIR /home/root/work-juman
+RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/juman/juman-7.01.tar.bz2
+RUN tar jxvf juman-7.01.tar.bz2
+RUN cd juman-7.01 && \
+    ./configure && \
+    make && \
+    make install
+RUN echo "/usr/local/lib" >> /etc/ld.so.conf
+RUN ldconfig
+
+RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/knp-4.16.tar.bz2
+RUN tar jxvf knp-4.16.tar.bz2
+RUN cd knp-4.16 && \
+    ./configure && \
+    make && \
+    make install
+
 # Create user
 RUN mkdir /home/ml
 RUN useradd -b /home/ml -G sudo -m -s /bin/bash ml && echo 'ml:ml' | chpasswd
@@ -56,27 +76,9 @@ RUN eval "$(pyenv init -)" && \
     pip install --upgrade cython && \
     pip install -r $HOME/.ml-env/requirements.txt
 
-# Install Juman++ & python binding
+# Install Juman++ python binding
 RUN mkdir $HOME/work-juman
 WORKDIR $HOME/work-juman
-RUN mkdir $HOME/.juman
-RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/juman/juman-7.01.tar.bz2
-RUN tar jxvf juman-7.01.tar.bz2
-RUN cd juman-7.01 && \
-    ./configure --prefix=$HOME/.juman && \
-    make && \
-    make install
-ENV PATH $HOME/.juman/bin:$PATH
-
-RUN mkdir $HOME/.knp
-RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/knp-4.16.tar.bz2
-RUN tar jxvf knp-4.16.tar.bz2
-RUN cd knp-4.16 && \
-    ./configure --prefix=$HOME/.knp && \
-    make && \
-    make install
-ENV PATH $HOME/.knp/bin:$PATH
-
 RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/pyknp-0.3.tar.gz
 RUN tar xvf pyknp-0.3.tar.gz
 RUN eval "$(pyenv init -)" && \
