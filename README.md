@@ -1,3 +1,10 @@
+# Password
+
+Please update passwords before building image.
+
+- Dockerfile create user part
+- jupyter_notebook_config.py
+
 # How to run docker image
 
     docker build -t zuqqhi2/mlenv .
