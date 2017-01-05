@@ -1,3 +1,7 @@
+# Note
+
+This image requires more than 9 GB disk space.
+
 # Password
 
 Please update passwords before building image.
@@ -16,6 +20,10 @@ Please update passwords before building image.
     docker run -it -p 8888:8888 zuqqhi2/mlenv /bin/bash
     source ~/.bash_profile
     mlact
+
+# TODO
+
+- Add "hmmlearn" to requirements.txt(just adding makes error now)
 
 # References
 
