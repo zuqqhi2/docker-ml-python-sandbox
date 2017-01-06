@@ -18,20 +18,19 @@ This docker setting is for tring to touch and test some machine learning.
 
 and other dependent libraries.
 
-# Note
-
 
 # Password
 
-Please update passwords before building image.
+Please update passwords(default is "ml" for following).
 
-- Dockerfile create user part
-- jupyter_notebook_config.py
+- ml user password
+- ipyton password(jupyter_notebook_config.py)
+
 
 # How to run docker image
 
     # Build image
-    # This image requires more than 9 GB disk space.
+    # This image requires more than 13 GB disk space
     docker build -t zuqqhi2/ml-python-sandbox .
 
     # Run jupyter notebook

@@ -42,6 +42,9 @@ RUN cd knp-4.16 && \
     make && \
     make install
 
+WORKDIR /home/root
+RUN rm -rf /home/root/work-juman
+
 # Create user
 RUN mkdir /home/ml
 RUN useradd -b /home/ml -G sudo -m -s /bin/bash ml && echo 'ml:ml' | chpasswd
@@ -49,8 +52,6 @@ RUN chown ml:ml /home/ml
 USER ml
 ENV HOME /home/ml
 WORKDIR $HOME
-RUN mkdir $HOME/share
-ADD . $HOME/share
 
 # Install pyenv
 RUN git clone https://github.com/yyuu/pyenv.git $HOME/.pyenv
@@ -86,6 +87,7 @@ RUN eval "$(pyenv init -)" && \
     cd pyknp-0.3 && \
     python setup.py install
 WORKDIR $HOME
+RUN rm -rf $HOME/work-juman
 
 # Run jupyter
 RUN mkdir $HOME/.jupyter
