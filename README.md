@@ -41,6 +41,11 @@ Please update passwords(default is "ml" for following).
     source ~/.bash_profile
     mlact
 
+    # Set japanese locale
+    export LANG=ja_JP.UTF-8
+    export LC_ALL=ja_JP.UTF-8
+    export LC_CTYPE=ja_JP.UTF-8
+
 # TODO
 
 - Add "hmmlearn" to requirements.txt(just adding makes error now)

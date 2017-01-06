@@ -20,7 +20,9 @@ RUN apt-get update && apt-get install -y \
   libmecab-dev \
   mecab-ipadic \
   mecab-ipadic-utf8 \
-  wget
+  wget \
+  language-pack-ja-base \
+  language-pack-ja
 
 # Install Juman & KNP 
 RUN mkdir /home/root
