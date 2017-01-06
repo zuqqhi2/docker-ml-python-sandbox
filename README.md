@@ -1,6 +1,25 @@
+# Purpose
+
+This docker setting is for tring to touch and test some machine learning.
+
+# Installed softwares
+
+- Tensorflow 0.12.0
+- Chainer 1.19.0
+- Scikit-learn 0.18.1
+- Gensim 0.13.4
+- Word2vec 0.9.1
+- Numpy 1.11.3
+- Pandas 0.19.2
+- Jupyter 4.2.1
+- Matplotlib 1.5.3
+- Mecab latest
+- Juman++ 7.01
+
+and other dependent libraries.
+
 # Note
 
-This image requires more than 9 GB disk space.
 
 # Password
 
@@ -11,13 +30,15 @@ Please update passwords before building image.
 
 # How to run docker image
 
-    docker build -t zuqqhi2/mlenv .
+    # Build image
+    # This image requires more than 9 GB disk space.
+    docker build -t zuqqhi2/ml-python-sandbox .
 
     # Run jupyter notebook
-    docker run -it -p 8888:8888 zuqqhi2/ml-sandbox
+    docker run -it -p 8888:8888 zuqqhi2/ml-python-sandbox
 
     # Login container
-    docker run -it -p 8888:8888 zuqqhi2/ml-sandbox /bin/bash
+    docker run -it -p 8888:8888 zuqqhi2/ml-python-sandbox /bin/bash
     source ~/.bash_profile
     mlact
 
