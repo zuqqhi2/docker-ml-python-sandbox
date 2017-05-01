@@ -37,9 +37,9 @@ RUN cd juman-7.01 && \
 RUN echo "/usr/local/lib" >> /etc/ld.so.conf
 RUN ldconfig
 
-RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/knp-4.16.tar.bz2
-RUN tar jxvf knp-4.16.tar.bz2
-RUN cd knp-4.16 && \
+RUN wget http://nlp.ist.i.kyoto-u.ac.jp/nl-resource/knp/knp-4.17.tar.bz2
+RUN tar jxvf knp-4.17.tar.bz2
+RUN cd knp-4.17 && \
     ./configure && \
     make && \
     make install

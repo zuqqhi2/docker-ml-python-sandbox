@@ -15,7 +15,6 @@ This docker setting is for tring to touch and test some machine learning.
 - Matplotlib 2.0.0
 - Mecab latest
 - Juman++ 7.01
-- Hmmlearn 0.2.0
 - Keras 2.0.4
 - NLTK 3.2.2 
 
