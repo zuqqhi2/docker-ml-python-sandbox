@@ -4,17 +4,20 @@ This docker setting is for tring to touch and test some machine learning.
 
 # Installed softwares
 
-- Tensorflow 0.12.0
+- Tensorflow 1.1.0
 - Chainer 1.19.0
 - Scikit-learn 0.18.1
-- Gensim 0.13.4
+- Gensim 2.0.0
 - Word2vec 0.9.1
-- Numpy 1.11.3
+- Numpy 1.12.1
 - Pandas 0.19.2
-- Jupyter 4.2.1
-- Matplotlib 1.5.3
+- Jupyter 4.3.0
+- Matplotlib 2.0.0
 - Mecab latest
 - Juman++ 7.01
+- Hmmlearn 0.2.0
+- Keras 2.0.4
+- NLTK 3.2.2 
 
 and other dependent libraries.
 
