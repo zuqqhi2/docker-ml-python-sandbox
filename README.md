@@ -2,7 +2,7 @@
 
 This docker setting is for tring to touch and test some machine learning.
 
-# Installed softwares
+# Installed main softwares
 
 - Tensorflow 1.1.0
 - Chainer 1.19.0
@@ -16,7 +16,8 @@ This docker setting is for tring to touch and test some machine learning.
 - Mecab latest
 - Juman++ 7.01
 - Keras 2.0.4
-- NLTK 3.2.2 
+- NLTK 3.2.2
+- TFLearn 0.3
 
 and other dependent libraries.
 
@@ -35,7 +36,7 @@ Please update passwords(default is "ml" for following).
     # This image requires more than 13 GB disk space
     docker build -t zuqqhi2/ml-python-sandbox .
 
-    # Run jupyter notebook
+    # Run jupyter notebook & tensorboard
     docker run -it -p 8888:8888 -p 6006:6006 zuqqhi2/ml-python-sandbox
 
     # Login container
@@ -47,6 +48,12 @@ Please update passwords(default is "ml" for following).
     export LANG=ja_JP.UTF-8
     export LC_ALL=ja_JP.UTF-8
     export LC_CTYPE=ja_JP.UTF-8
+
+# Change Log from 1.0.3
+
+- 1.1.0
+  - New Library/Tool : Seaborn, TFLearn, TFGraphviz, Tensorboard
+  - Others : samples.ipynb to introduce how to use libraries, start_webuis.sh to run jupyter notebook and tensorboard 
 
 # TODO
 
