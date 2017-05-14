@@ -36,10 +36,10 @@ Please update passwords(default is "ml" for following).
     docker build -t zuqqhi2/ml-python-sandbox .
 
     # Run jupyter notebook
-    docker run -it -p 8888:8888 zuqqhi2/ml-python-sandbox
+    docker run -it -p 8888:8888 -p 6006:6006 zuqqhi2/ml-python-sandbox
 
     # Login container
-    docker run -it -p 8888:8888 zuqqhi2/ml-python-sandbox /bin/bash
+    docker run -it -p 8888:8888 -p 6006:6006 zuqqhi2/ml-python-sandbox /bin/bash
     source ~/.bash_profile
     mlact
 
@@ -50,10 +50,11 @@ Please update passwords(default is "ml" for following).
 
 # TODO
 
-- Add "hmmlearn" to requirements.txt(just adding makes error now)
+- Add "hmmlearn" to requirements.txt
 
 # References
 
 - [Jupyter Notebook - Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)
 - [JUMAN++をPythonから使う](http://qiita.com/riverwell/items/7a85ebf95647eaf18a6c)
 - [MecabをUbuntu14.04にインストールして実行してみる](https://foolean.net/p/22)
+- [TensorFlowのグラフをJupyter上で可視化する](http://qiita.com/akimach/items/d6d87e9fcdc4800d492a)

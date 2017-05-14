@@ -91,16 +91,15 @@ RUN eval "$(pyenv init -)" && \
 WORKDIR $HOME
 RUN rm -rf $HOME/work-juman
 
-# Run jupyter
+# Run jupyter notebook & tensorboard
 RUN mkdir $HOME/.jupyter
-ADD samples.ipynb $HOME
+ADD samples.ipynb $HOME/ml
 ADD jupyter_notebook_config.py $HOME/.jupyter
+RUN mkdir -p /tmp/tflearn_logs
+ADD requirements_for_non_venv.txt $HOME
+ADD start_webuis.sh $HOME
+RUN eval "$(pyenv init -)" && \
+    pip install -r $HOME/requirements_for_non_venv.txt
 CMD eval "$(pyenv init -)" && \
     . $HOME/.ml-env/bin/activate && \
-    jupyter notebook --ip=0.0.0.0 --port=8888 &
-
-# Run tensorboard
-ADD requirements_for_non_venv.txt $HOME
-CMD eval "$(pyenv init -)" && \
-    pip install -r $HOME/requirements_for_non_venv.txt && \
-    tensorboard --logdir='/tmp/tflearn_logs' --port=6006
+    $HOME/start_webuis.sh 
