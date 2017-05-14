@@ -67,3 +67,7 @@ webencodings==0.5.1
 Werkzeug==0.12.1
 widgetsnbextension==2.0.0
 word2vec==0.9.1
+seaborn==0.7.1
+tflearn==0.3
+h5py==2.7.0
+tfgraphviz==0.0.5

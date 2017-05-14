@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 MAINTAINER Hidetomo SUZUKI <zuqqhi2@gmail.com>
-LABEL description="This is for machine learning sandbox. Install scikit-learn, chainer, tensorflow, mecab, juman++ and others."
+LABEL description="This is for machine learning sandbox. This has scikit-learn, chainer, tensorflow, tflearn, mecab, juman++ and others."
 
 # Install libraries
 RUN apt-get update && apt-get install -y \
@@ -93,7 +93,14 @@ RUN rm -rf $HOME/work-juman
 
 # Run jupyter
 RUN mkdir $HOME/.jupyter
+ADD samples.ipynb $HOME
 ADD jupyter_notebook_config.py $HOME/.jupyter
 CMD eval "$(pyenv init -)" && \
     . $HOME/.ml-env/bin/activate && \
-    jupyter notebook --ip=0.0.0.0 --port=8888
+    jupyter notebook --ip=0.0.0.0 --port=8888 &
+
+# Run tensorboard
+ADD requirements_for_non_venv.txt $HOME
+CMD eval "$(pyenv init -)" && \
+    pip install -r $HOME/requirements_for_non_venv.txt && \
+    tensorboard --logdir='/tmp/tflearn_logs' --port=6006
