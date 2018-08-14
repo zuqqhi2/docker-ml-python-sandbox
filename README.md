@@ -4,20 +4,20 @@ This docker setting is for tring to touch and test some machine learning.
 
 # Installed main softwares
 
-- Tensorflow 1.1.0
-- Chainer 1.19.0
-- Scikit-learn 0.18.1
-- Gensim 2.0.0
-- Word2vec 0.9.1
-- Numpy 1.12.1
-- Pandas 0.19.2
-- Jupyter 4.3.0
-- Matplotlib 2.0.0
+- Tensorflow 1.10.0
+- Chainer 4.3.1
+- PyTorch 0.4.1
+- Keras 2.2.2
+- Chainer RL 0.4.0
+- Scikit-learn 0.19.2
+- Gensim 3.5.0
+- Numpy 1.14.5
+- Pandas 0.23.4
+- Jupyter Lab 0.33.10
+- Matplotlib 2.2.3
 - Mecab latest
 - Juman++ 7.01
-- Keras 2.0.4
-- NLTK 3.2.2
-- TFLearn 0.3
+- NLTK 3.3.0 
 
 and other dependent libraries.
 
@@ -57,7 +57,7 @@ Please update passwords(default is "ml" for following).
 
 # TODO
 
-- Add "hmmlearn" to requirements.txt
+- Nothing now
 
 # References
 

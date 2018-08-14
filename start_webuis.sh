@@ -3,8 +3,8 @@
 echo "START WebUIs"
 
 # Jupyter Notebook
-echo "Run jupyter notebook"
-jupyter notebook --ip=0.0.0.0 --port=8888 > $HOME/jupyter_notebook.log 2>&1 &
+echo "Run jupyter lab"
+jupyter lab --ip=0.0.0.0 --port=8888 > $HOME/jupyter_notebook.log 2>&1 &
 
 # Tensorboard
 echo "Run tensorboard"

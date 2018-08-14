@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+tensorflow = "==1.10.0"
+numpy = "==1.14.5"
+nltk = "==3.3.0"
+gensim = "==3.5.0"
+chainer = "==4.3.1"
+seaborn = "==0.9.0"
+tflearn = "==0.3.2"
+keras = "==2.2.2"
+scikit-learn = "==0.19.2"
+jupyter = "==1.0.0"
+matplotlib = "==2.2.3"
+jupyterlab = "==0.33.10"
+pandas = "==0.23.4"
+torch = "==0.4.1"
+torchvision = "==0.2.1"
+tfgraphviz = "==0.0.6"
+graphviz = "==0.8.4"
+pydotplus = "==2.0.2"
+"mecab-python3" = "==0.7"
+chainerrl = "==0.4.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
