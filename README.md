@@ -50,7 +50,9 @@ Please update passwords(default is "ml" for following).
     export LC_CTYPE=ja_JP.UTF-8
 
 # Change Log from 1.0.3
-
+- 1.2.0
+  - New Library/Tool : PyTorch, Chainer RL, Pipenv, Jupyterlab
+  - Others : Change start_webuis.sh to run Jupyter Lab instead of Jupyter Notebook
 - 1.1.0
   - New Library/Tool : Seaborn, TFLearn, TFGraphviz, Tensorboard
   - Others : samples.ipynb to introduce how to use libraries, start_webuis.sh to run jupyter notebook and tensorboard 
