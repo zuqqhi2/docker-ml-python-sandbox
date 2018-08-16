@@ -42,7 +42,7 @@ Please update passwords(default is "ml" for following).
     # Login container
     docker run -it -p 8888:8888 -p 6006:6006 zuqqhi2/ml-python-sandbox /bin/bash
     source ~/.bash_profile
-    mlact
+    pipenv shell
 
     # Set japanese locale
     export LANG=ja_JP.UTF-8
